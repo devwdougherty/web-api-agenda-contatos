@@ -21,9 +21,7 @@ namespace WebApiAgendaContatos.Services
         public DatabaseSeeder(AgendaContext context)
         {
             _context = context;
-            //logger.Info("Initial data seed started...");
             SeedDatabase();
-            //logger.Info("Initial data seed finished...");
         }
 
         /// <summary>
@@ -33,11 +31,11 @@ namespace WebApiAgendaContatos.Services
         {
             if (_context.Contatos.Count() == 0)
             {
-                _context.Contatos.Add(new Contato { Nome = "Thaiz", Telefone = "11 11111-1111" });
-                _context.Contatos.Add(new Contato { Nome = "Daniel", Telefone = "11 22222-22222" });
-                _context.Contatos.Add(new Contato { Nome = "Willian", Telefone = "15 99751-0298" });
-                _context.Contatos.Add(new Contato { Nome = "Moreno", Telefone = "11 33333-3333" });
-                _context.Contatos.Add(new Contato { Nome = "W12 Evo", Telefone = "11 3529-2801" });
+                _context.Contatos.Add(new Contato { Nome = "Willian", Telefone = "11 11111-1111" });
+                _context.Contatos.Add(new Contato { Nome = "Dougherty", Telefone = "11 22222-22222" });
+                _context.Contatos.Add(new Contato { Nome = "Nascimento", Telefone = "15 99751-0298" });
+                _context.Contatos.Add(new Contato { Nome = "Barbosa", Telefone = "11 33333-3333" });
+                _context.Contatos.Add(new Contato { Nome = "Maria", Telefone = "11 3529-2801" });
                 
                 _context.SaveChanges();
             }
